@@ -1,1 +1,81 @@
-Esto es una prueba hola, hola.
+# Explicación de comandos de Git utilizados
+
+## git clone
+**Descripción:**  
+Este comando se utiliza para descargar una copia local de un repositorio remoto en tu máquina. Sirve para obtener todo el historial y los archivos del repositorio.  
+**Uso:**  
+PS C:\PAT> git clone https://github.com/carlosagustii/p1-fork
+Cloning into 'p1-fork'...
+remote: Enumerating objects: 6, done.
+remote: Counting objects: 100% (1/1), done.
+remote: Total 6 (delta 0), reused 0 (delta 0), pack-reused 5 (from 1)
+Receiving objects: 100% (6/6), done.
+
+Se ha usado para clonar el repositorio desde GitHub a la máquina local.
+
+---
+
+## git status
+**Descripción:**  
+Muestra el estado del árbol de trabajo y el área de preparación (staging). Indica qué archivos han cambiado, cuáles están listos para ser confirmados y cuáles no están bajo seguimiento.  
+**Uso:**  
+PS C:\PAT> git status
+fatal: not a git repository (or any of the parent directories): .git
+PS C:\PAT> cd p1-fork
+PS C:\PAT\p1-fork> git status
+On branch main
+Your branch is up to date with 'origin/main'.
+
+nothing to commit, working tree clean
+
+Se ha usado para verificar el estado del repositorio después de clonarlo y antes de realizar cambios.
+
+---
+
+## git add
+**Descripción:**  
+Añade archivos al área de preparación para que puedan ser confirmados en el próximo commit.  
+**Uso:**  
+PS C:\PAT\p1-fork> git add git.txt
+fatal: pathspec 'git.txt' did not match any files
+PS C:\PAT\p1-fork> git add git.txt
+
+Se ha usado para preparar el archivo `git.txt` antes de confirmarlo en el repositorio.
+
+---
+
+## git commit
+**Descripción:**  
+Guarda los cambios preparados en el historial del repositorio con un mensaje descriptivo sobre lo que se ha modificado.  
+**Uso:** 
+PS C:\PAT\p1-fork> git commit -m "primera prueba añadiendo git.txt"
+[main ff11203] primera prueba añadiendo git.txt
+ 1 file changed, 1 insertion(+)
+ create mode 100644 git.txt
+ 
+Se ha usado para confirmar la adición del archivo `git.txt` en el repositorio con un mensaje explicativo.
+
+---
+
+## git push
+**Descripción:**  
+Envía los commits confirmados en el repositorio local al repositorio remoto en GitHub, sincronizando los cambios con la rama especificada.  
+**Uso:**  
+PS C:\PAT\p1-fork> git push origin main
+Enumerating objects: 4, done.
+Counting objects: 100% (4/4), done.
+Delta compression using up to 16 threads
+Compressing objects: 100% (2/2), done.
+Writing objects: 100% (3/3), 336 bytes | 336.00 KiB/s, done.
+Total 3 (delta 0), reused 0 (delta 0), pack-reused 0 (from 0)
+To https://github.com/carlosagustii/p1-fork
+   07720b5..ff11203  main -> main
+
+Se ha usado para subir los cambios realizados al repositorio remoto en la rama `main`.
+
+---
+
+## git checkout
+**Descripción:**  
+Permite cambiar entre ramas o restaurar archivos a un estado anterior.  
+Se puede usar para cambiar a otra rama de desarrollo o volver a una versión anterior de un archivo.
