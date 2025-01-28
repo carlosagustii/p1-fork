@@ -26,4 +26,6 @@ git checkout main
 # SOLUCIÓN 
 Se ha adjuntado el desarrollo de los comandos en el documento git.txt
 A continuación adjunto alguna captura para el intento de tener más nota:
+## Ejemplo captura:
+
 ![image](https://github.com/user-attachments/assets/ea4bc14e-52e9-4bc6-89e9-8c9d2637aae2)
